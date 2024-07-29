@@ -1,16 +1,16 @@
-const profileGame = {
-  profile: {
+const profile = {
+  profileGame: {
     username: "Jacob",
     playTime: 300,
   },
   changeUsername(newName) {
-    newName = this.profile.username;
+    this.profileGame.username = newName;
   },
   updatePlayTime(hours) {
-    hours = this.profile.playTime;
+    this.profileGame.playTime += hours;
   },
   getInfo() {
-    return `${newName} ma ${hours} aktywnych godzin!`;
+    return `${this.profileGame.username} ma ${this.profileGame.playTime} aktywnych godzin!`;
   },
 };
 
